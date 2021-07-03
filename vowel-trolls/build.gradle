@@ -1,0 +1,22 @@
+plugins {
+    id 'groovy'
+    id 'com.github.sherter.google-java-format' version '0.9'
+}
+
+group 'com.jos.dem.kata'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.5'
+    testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+test.dependsOn rootProject.tasks['googleJavaFormat']
