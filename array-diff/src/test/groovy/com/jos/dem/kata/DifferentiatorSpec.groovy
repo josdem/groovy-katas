@@ -8,8 +8,16 @@ class DifferentiatorSpec extends Specification {
 
     void "Getting diff"() {
         when: "I apply diff"
-        def result = differentiator.diff([1,2], [1])
+        def result = differentiator.diff(a, b)
         then: "I verify difference"
-        result == [2]
+        result == expectedResult
+        where:
+        a       | b     | expectedResult
+        [1,2]   | [1]   | [2]
+        [1,2,2] | [1]   | [2,2]
+        [1,2,2] | [2]   | [1]
+        [1,2,2] | []    | [1,2,2]
+        []      | [1,2] | []
+        [1,2,3] | [1,2] | [3]
     }
 }
