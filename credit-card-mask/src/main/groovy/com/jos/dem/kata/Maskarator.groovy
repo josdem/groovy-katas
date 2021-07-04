@@ -13,6 +13,6 @@ class Maskarator {
     def maskify(String keyword) {
         keyword.length() <= SUFFIX_LENGTH
                 ? keyword
-                : keyword.substring(0, keyword.length() - SUFFIX_LENGTH).replaceAll('.', '#') + keyword.substring(keyword.length() - SUFFIX_LENGTH)
+                : '#' * (keyword.length() - SUFFIX_LENGTH) + keyword.substring(keyword.length() - SUFFIX_LENGTH)
     }
 }
