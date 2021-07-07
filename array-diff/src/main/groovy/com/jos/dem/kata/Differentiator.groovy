@@ -8,12 +8,7 @@ It should remove all values from list a, which are present in list b keeping the
 class Differentiator {
 
     def diff(a, b){
-        def result = []
-        a.each {
-            if(!b.contains(it)) {
-                result << it
-            }
-        }
-        result
+        a.removeAll(b)
+        a
     }
 }
