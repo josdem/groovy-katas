@@ -7,6 +7,8 @@ You will be given an array of numbers. You have to sort the odd numbers in ascen
 class Sorter {
 
     int[] sort(int[] array){
-        array
+        int index = 0
+        def odds = array.findAll(it -> it % 2 == 1).sort()
+        array.each {it -> it %2 == 1 ? odds.remove(index++) : it}.collect()
     }
 }
