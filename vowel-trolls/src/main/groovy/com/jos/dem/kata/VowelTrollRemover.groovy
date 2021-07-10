@@ -11,11 +11,11 @@ Note: for this kata y isn't considered a vowel.
 class VowelTrollRemover {
 
     def remove(def keyword) {
+        def vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
         def result = ''
-        keyword.each { ch ->
-            if(ch != 'a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u' && ch != 'A'
-                    && ch != 'E' && ch != 'I' && ch != 'O' && ch != 'U'){
-                result = result + ch
+        keyword.each {
+            if (!vowels.contains(it)) {
+                result = result + it
             }
         }
         result
