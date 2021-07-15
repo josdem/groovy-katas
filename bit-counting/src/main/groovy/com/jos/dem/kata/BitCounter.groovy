@@ -9,6 +9,6 @@ Example: The binary representation of 1234 is 10011010010, so the function shoul
 class BitCounter {
 
     def countBits(def number) {
-        number
+        Integer.toBinaryString(number).collect {it == '1'}.count{ it }
     }
 }

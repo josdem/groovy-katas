@@ -13,11 +13,11 @@ class BitCounterSpec extends Specification {
         result == expectedResult
         where:
         number  |   expectedResult
-        5       |   1234
-        1       |   4
-        3       |   7
-        2       |   9
-        2       |   10
+        1234    |   5
+        4       |   1
+        7       |   3
+        9       |   2
+        10      |   2
     }
 
 }
