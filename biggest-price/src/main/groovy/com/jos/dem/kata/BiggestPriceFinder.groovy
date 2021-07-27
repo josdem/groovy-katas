@@ -9,7 +9,9 @@ result = 32.0
 
 class BiggestPriceFinder {
 
-    def find(prices){
-        prices.size()
+    private def regex = "-?[0-9]+.?[0-9]+"
+
+    def find(prices) {
+        prices.findAll { it.matches(regex) }.collect { Double.parseDouble(it) }.max()
     }
 }
