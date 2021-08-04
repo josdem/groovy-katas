@@ -8,6 +8,6 @@ Your task is to create a function that removes all small candles and just keep t
 class CandleCounter {
 
     def find(candles){
-        candles
+        candles.findAll { it == candles.max() }
     }
 }
