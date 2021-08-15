@@ -7,6 +7,6 @@ Given an integer collection return a sum of its elements
 class CollectorAdder {
 
     def sum(def numbers){
-        numbers.size()
+        numbers.sum {it}
     }
 }
