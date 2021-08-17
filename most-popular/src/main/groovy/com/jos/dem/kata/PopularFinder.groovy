@@ -8,6 +8,8 @@ Write a function that finds most popular number in the array, in this case 34 be
 class PopularFinder {
 
     def find(def numbers){
-        return numbers.size()
+        def numbersGrouped = numbers.groupBy { numbers.count(it) }
+        def keyMostPopular = numbersGrouped.keySet().max()
+        numbersGrouped.get(keyMostPopular)[0]
     }
 }
