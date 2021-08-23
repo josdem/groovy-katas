@@ -8,6 +8,6 @@ When we have: [25, 25, 18, 18, 18, 36, 1, 2, 2, 34] first non-repeated number is
 class NonRepeatedFinder {
 
     def find(def numbers){
-        numbers.size()
+        numbers.groupBy { numbers.count(it) }.min{ it.key }.value[0]
     }
 }
