@@ -9,6 +9,6 @@ Given: [-4, 3, -9, 0, 4, 1] then expected output is: [3, 2, 1]
 class NumbersCounter {
 
     def count(numbers) {
-        numbers
+        [numbers.findAll { it > 0 }.size(), numbers.findAll { it < 0 }.size(), numbers.findAll { it == 0 }.size()]
     }
 }
