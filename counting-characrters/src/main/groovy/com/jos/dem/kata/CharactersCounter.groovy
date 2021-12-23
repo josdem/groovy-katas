@@ -12,4 +12,8 @@ class CharactersCounter {
     def countVowels(keyword){
         keyword.length()
     }
+
+    def countConsonants(keyword) {
+        keyword.length()
+    }
 }

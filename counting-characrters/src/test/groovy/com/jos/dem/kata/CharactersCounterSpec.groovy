@@ -13,4 +13,11 @@ class CharactersCounterSpec extends Specification {
           result == 2
     }
 
+    void "should count consonants"(){
+        when: "I call consonants counter"
+        def result = charactersCounter.countConsonants("josdem")
+        then: "I verify consonants quantity"
+        result == 4
+    }
+
 }
