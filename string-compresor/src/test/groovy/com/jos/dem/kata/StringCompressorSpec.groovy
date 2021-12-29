@@ -6,14 +6,14 @@ class StringCompressorSpec extends Specification {
 
     def stringCompressor = new StringCompressor()
 
-    void "should compress a string"(){
+    void "should compress a string"() {
         when: "I call to compress method"
         def result = stringCompressor.compress(keyword)
         then: "I verify is a compressed string"
         result == expectedResult
         where:
-        keyword     |   expectedResult
-        "aaabbbbcc" |   "a3b4c2"
+        keyword     | expectedResult
+        "aaabbbbcc" | "a3b4c2"
 
     }
 }
