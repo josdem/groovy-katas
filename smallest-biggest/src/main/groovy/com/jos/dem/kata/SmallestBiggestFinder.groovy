@@ -10,8 +10,6 @@ Then: I will get a collection with [2, 9] values
 class SmallestBiggestFinder {
 
     def find(numbers){
-        Integer smallest = numbers.min()
-        Integer biggest = numbers.max()
-        [smallest, biggest]
+        [numbers.min(), numbers.max()]
     }
 }
