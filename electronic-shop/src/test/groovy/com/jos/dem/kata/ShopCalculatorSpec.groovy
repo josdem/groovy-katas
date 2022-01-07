@@ -10,9 +10,9 @@ class ShopCalculatorSpec extends Specification {
         given: "User and store inputs"
             def amount = 10
             def usbs = [5, 2, 8]
-            def keywords = [3, 1]
+            def keyboards = [3, 1]
         when: "I call to the shop calculator"
-            def result = shopCalculator.compute(amount, usbs, keywords)
+            def result = shopCalculator.compute(amount, usbs, keyboards)
         then: "I validate expected shopping spend"
             result == 9
     }
