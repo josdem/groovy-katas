@@ -8,6 +8,10 @@ class ShopCalculator {
                 u -> pairs.add(new Tuple2(k,u))
             }
         }
+        def prices = []
+        pairs.each {
+            it -> prices.add(it.first + it.second)
+        }
         amount + usbs.size() + keyboards.size()
     }
 }
