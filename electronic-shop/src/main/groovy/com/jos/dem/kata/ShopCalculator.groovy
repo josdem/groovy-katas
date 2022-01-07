@@ -12,6 +12,6 @@ class ShopCalculator {
         pairs.each {
             it -> prices.add(it.first + it.second)
         }
-        amount + usbs.size() + keyboards.size()
+        prices.findAll(it -> it <= amount).max()
     }
 }
