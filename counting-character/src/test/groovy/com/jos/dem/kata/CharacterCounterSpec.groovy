@@ -8,11 +8,15 @@ class CharacterCounterSpec extends Specification {
 
     void "should count last character"(){
         given: "A string and a character"
-          def keyword = "josdem"
-          def character = 'm' as Character
+          def keyword = k
+          def character = ch
         when: "I call to the count method"
           def result = characterCounter.count(keyword, character)
         then: "I validate expected result"
-          result == 1
+          result == expectedResult
+        where:
+        k           | ch                || expectedResult
+        "josdem"    | "m" as Character  || 1
+        "Alabama"   | "a" as Character  || 3
     }
 }
