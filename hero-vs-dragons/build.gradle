@@ -1,0 +1,24 @@
+plugins {
+    id 'groovy'
+}
+
+ext {
+    groovyVersion = '3.0.5'
+    spockVersion = '2.0-groovy-3.0'
+}
+
+group 'com.josdem.kata'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.codehaus.groovy:groovy-all:$groovyVersion"
+    testImplementation "org.spockframework:spock-core:$spockVersion"
+}
+
+test {
+    useJUnitPlatform()
+}
