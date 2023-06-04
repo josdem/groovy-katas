@@ -57,4 +57,6 @@ jobs:
         run: cd ${{ github.workspace }}/square-calculator && ./gradlew test
       - name: Execute string compressor tests
         run: cd ${{ github.workspace }}/string-compressor && ./gradlew test  
+      - name: Execute vowel trolls tests
+        run: cd ${{ github.workspace }}/vowel-trolls && ./gradlew test  
       - run: echo "🍏 This job's status is ${{ job.status }}."
