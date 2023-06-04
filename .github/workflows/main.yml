@@ -17,4 +17,48 @@ jobs:
         run: ls ${{ github.workspace }}
       - name: Execute array diff tests
         run: cd ${{ github.workspace }}/array-diff && ./gradlew test
+      - name: Execute biggest price tests
+        run: cd ${{ github.workspace }}/biggest-price && ./gradlew test
+      - name: Execute bit counting tests
+        run: cd ${{ github.workspace }}/bit-counting && ./gradlew test
+      - name: Execute collection sum tests
+        run: cd ${{ github.workspace }}/collection-sum && ./gradlew test
+      - name: Execute common elements tests
+        run: cd ${{ github.workspace }}/common-elements && ./gradlew test
+      - name: Execute counting character tests
+        run: cd ${{ github.workspace }}/counting-character && ./gradlew test
+      - name: Execute counting characters tests
+        run: cd ${{ github.workspace }}/counting-characters && ./gradlew test
+      - name: Execute counting-numbers tests
+        run: cd ${{ github.workspace }}/counting-numbers && ./gradlew test
+      - name: Execute create phone number tests
+        run: cd ${{ github.workspace }}/create-phone-number && ./gradlew test
+      - name: Execute credit card mask tests
+        run: cd ${{ github.workspace }}/credit-card-mask && ./gradlew test
+      - name: Execute digital sum tests
+        run: cd ${{ github.workspace }}/digital-sum && ./gradlew test
+      - name: Execute disem vowel trolls tests
+        run: cd ${{ github.workspace }}/disem-vowel-trolls && ./gradlew test
+      - name: Execute electronic shop tests
+        run: cd ${{ github.workspace }}/electronic-shop && ./gradlew test
+      - name: Execute find the odd tests
+        run: cd ${{ github.workspace }}/find-the-odd && ./gradlew test
+      - name: Execute first non repeated tests
+        run: cd ${{ github.workspace }}/first-non-repeated && ./gradlew test
+      - name: Execute hero vs dragons tests
+        run: cd ${{ github.workspace }}/hero-vs-dragons && ./gradlew test
+      - name: Execute longest substring tests
+        run: cd ${{ github.workspace }}/longest-substring && ./gradlew test
+      - name: Execute most popular tests
+        run: cd ${{ github.workspace }}/most-popular && ./gradlew test
+      - name: Execute parentheses balance tests
+        run: cd ${{ github.workspace }}/parentheses-balance && ./gradlew test
+      - name: Execute smallest biggest tests
+        run: cd ${{ github.workspace }}/smallest-biggest && ./gradlew test
+      - name: Execute sort the odd tests
+        run: cd ${{ github.workspace }}/sort-the-odd && ./gradlew test
+      - name: Execute square calculator tests
+        run: cd ${{ github.workspace }}/square-calculator && ./gradlew test
+      - name: Execute string compressor tests
+        run: cd ${{ github.workspace }}/string-compressor && ./gradlew test  
       - run: echo "🍏 This job's status is ${{ job.status }}."
